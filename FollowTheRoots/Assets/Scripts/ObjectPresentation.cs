@@ -46,7 +46,13 @@ public class ObjectPresentation : MonoBehaviour
             if (transform.position.y < bPosition.y)
                 goesUp = true;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-            UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            GameManager.ChangeScene("EndScene");
+        }
     }
 }
