@@ -278,6 +278,7 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
+            transform.SetPositionAndRotation(new Vector3(0.0f, transform.position.y, transform.position.z), transform.rotation);
         }
 
         private void JumpAndGravity()
